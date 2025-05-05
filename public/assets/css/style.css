@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body {
+    font-family: "Poetsen One", sans-serif;
+}
+
+/* button */
+.btn-danger {
+    background-color: #bd0001;
+    border-radius: 10px;
+    border-color: #bd0001;
+    padding: 10px 45px;
+    color: white;
+}
+
+
+/* navbar*/
+.nav-item.nav-link{
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#hero {
+    background-image: url('../../assets/image/bg-web_.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+
+.hero-title{
+    padding-top: 250px;
+    color: red;
+}
+
+.hero-text{
+    font-size: 65px;
+    font-weight: 600;
+    color: #bd0001;
+}
