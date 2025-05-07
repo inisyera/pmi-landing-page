@@ -18,10 +18,10 @@
     <body>
 
         {{-- Navbar --}}
-        <nav class="navbar navbar-expand-lg navbar-dark py-3 bg-dark">
-            <div class="container">
-              <a class="navbar-brand" href="#">
-                <img src="{{ asset('assets/icons/logo_pmi.jpg') }}" height="55" width="115" alt="">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color : #bd0001">
+          <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{{ asset('assets/icons/logo.png') }}" height="45" alt="Logo PMI">
               </a> 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,19 +29,19 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <div class="d-flex" >
-                    <button class="nav-link" >Jadwal Donor </button>
+                    <button class="nav-link" style="color: white;" >Jadwal Donor </button>
                   </div>
                   <div class="d-flex" >
-                    <button class="nav-link" >Stock Darah</button>
+                    <button class="nav-link" style="color: white;" >Stock Darah</button>
                   </div>
                  
                 </ul>
                 <div class="d-flex" >
-                  <button class="btn btn-danger" >Login</button>
+                  <a href="{{ route('filament.admin.auth.login') }}" class="btn btn-danger">Login</a>
                 </div>
-              </div>
             </div>
-          </nav>
+          </div>
+        </nav>
 
         {{-- Navbar --}}
 
