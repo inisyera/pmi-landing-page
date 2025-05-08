@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poetsen+One&display=swap');
 body {
     font-family: "Poetsen One", sans-serif;
 }
@@ -16,6 +15,7 @@ body {
 
 /* navbar*/
 .nav-item.nav-link{
+    position: fixed;
     font-size: 18px;
     margin-left: 5px;
     margin-right: 5px;
@@ -40,3 +40,41 @@ body {
     color: #bd0001;
 }
 
+.nav-link.active {
+    background-color: #ffffff22;
+    border-radius: 5px;
+  }
+
+  .content-box {
+    background-color: white;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+}
+
+table {
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+td {
+    text-align: left;
+    font-weight: bold;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+th {
+    text-align: left;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

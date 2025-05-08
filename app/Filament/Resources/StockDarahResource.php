@@ -45,7 +45,9 @@ class StockDarahResource extends Resource
 {
     return $table
         ->columns([
-            TextColumn::make('No')->label('No')->sortable()->searchable(),
+            TextColumn::make('No')
+                ->label('No')
+                ->rowIndex()->sortable()->searchable(),
             TextColumn::make('KabKota')->label('Kab/Kota')->sortable()->searchable(),
             TextColumn::make('Golda_a')->sortable()->searchable(),
             TextColumn::make('Golda_b')->sortable()->searchable(),
