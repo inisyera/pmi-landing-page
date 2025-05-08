@@ -29,15 +29,15 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <div class="d-flex" >
-                    <button class="nav-link" style="color: white;" >Jadwal Donor </button>
+                    <button class="nav-link" href="/JadwalDonor" style="color: white;" >Jadwal Donor </button>
                   </div>
                   <div class="d-flex" >
-                    <button class="nav-link" style="color: white;" >Stock Darah</button>
+                    <button class="nav-link" href="/StcokDarah" style="color: white;" >Stock Darah</button>
                   </div>
                  
                 </ul>
                 <div class="d-flex" >
-                  <a href="{{ route('filament.admin.auth.login') }}" class="btn btn-danger">Login</a>
+                  <a href="{{ route('filament.admin.auth.login') }}" class="btn btn-primary">Login</a>
                 </div>
             </div>
           </div>
@@ -53,6 +53,69 @@
                 </div>
             </div>
         </section>
+
+        {{-- Tabel Jadwal Donor --}}
+
+        <h2 id="JadwalDonor" style="text-align: center;">Jadwal Donor Darah</h2>
+
+        <table class="table table-bordered table-stripped mt-3" id="table">
+          <thead>
+              <tr>
+                  <th>No</th>
+                  <th style="text-align: center;">Lokasi</th>
+                  <th style="text-align: center;">Alamat</th>
+                  <th style="text-align: center;">Jam Mulai</th>
+                  <th style="text-align: center;">Jam Selesai</th>
+                  <th style="text-align: center;">Peruntukan</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach ($dataJadwal as $jadwal)
+              <tr>
+                  <td>{{ $loop->iteration }}</td>
+                  <td style="text-align: center;">{{ $jadwal->Lokasi }}</td>
+                  <td style="text-align: center;">{{ $jadwal->Alamat }}</td>
+                  <td style="text-align: center;">{{ $jadwal->Jam_Mulai }}</td>
+                  <td style="text-align: center;">{{ $jadwal->Jam_Selesai }}</td>
+                  <td style="text-align: center;">{{ $jadwal->Peruntukan }}</td>
+              </tr>
+              @endforeach
+          </tbody>
+        </table>
+
+      {{-- Stock Darah --}}
+
+      <h2 id="StockDarah" style="text-align: center;">Stok Darah</h2>
+
+      <table class="table table-bordered table-stripped mt-3" id="table">
+          <thead>
+              <tr>
+                  <th>No</th>
+                  <th style="text-align: center;">Kab/Kota</th>
+                  <th style="text-align: center;">Golda A</th>
+                  <th style="text-align: center;">Golda B</th>
+                  <th style="text-align: center;">Golda AB</th>
+                  <th style="text-align: center;">Golda O</th>
+              </tr>
+          </thead>
+          <tbody>
+              @foreach ($dataStock as $stock)
+              <tr>
+                  <td>{{ $loop->iteration }}</td>
+                  <td style="text-align: center;">{{ $stock->KabKota}}</td>
+                  <td style="text-align: center;">{{ $stock->Golda_a}}</td>
+                  <td style="text-align: center;">{{ $stock->Golda_b}}</td>
+                  <td style="text-align: center;">{{ $stock->Golda_ab}}</td>
+                  <td style="text-align: center;">{{ $stock->Golda_o}}</td>
+                  <td style="text-align: center;">{{ $stock->Tgl_Upate}}</td>
+                 
+              </tr>
+              @endforeach
+          </tbody>
+      </table>
+      
+
+
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity=
         "sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>

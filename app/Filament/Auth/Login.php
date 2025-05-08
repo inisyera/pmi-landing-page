@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Auth;
+namespace App\Filament\Pages\Auth;
 
 use Filament\Actions\Auth\LoginResponse as BaseLoginResponse;
 use Filament\Actions\Contracts\LoginResponse as LoginResponseContract;
